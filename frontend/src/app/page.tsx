@@ -189,7 +189,7 @@ export default function Home() {
                   darkMode ? "gray-500" : "white"
                 } p-4 rounded-lg shadow-md`}
               >
-                <img src={product.imageUrl}
+                <Image src={product.imageUrl}
                   alt={product.name}
                   className="w-full h-64 object-cover mb-4"/>
                 <h2
@@ -219,7 +219,7 @@ export default function Home() {
                   darkMode ? "gray-500" : "white"
                 } p-4 rounded-lg shadow-md`}
               >
-                <img src={product.imageUrl}
+                <Image src={product.imageUrl}
                   alt={product.name}
                   className="w-full h-64 object-cover mb-4 "/>
                 <h2

@@ -15,7 +15,7 @@ export default function Contact() {
 
       <div className="max-w-lg mx-auto">
         <p className="text-lg mb-4">
-          Have a question, feedback, or just want to say hello? Fill out the form below and we'll get back to you as soon
+          Have a question, feedback, or just want to say hello? Fill out the form below and we&aposll get back to you as soon
           as possible.
         </p>
         <form className="grid grid-cols-1 gap-6">
