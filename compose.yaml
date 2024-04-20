@@ -1,0 +1,82 @@
+version: '3.9'
+
+services:
+  redis:
+    container_name: redis
+    image: redis/redis-stack
+    ports:
+      - 6379:6379
+    restart: always
+
+  frontend:
+    container_name: frontend
+    image: frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    restart: always
+    depends_on:
+      - redis
+
+  signup:
+      container_name: signup
+      image: signup
+      build:
+        context: ./backend/SignUp
+        dockerfile: Dockerfile
+      ports:
+        - 8880:8880
+      restart: always
+      depends_on:
+        - redis      
+
+  login:
+    container_name: login
+    image: login
+    build:
+      context: ./backend/Login
+      dockerfile: Dockerfile
+    ports:
+      - 8881:8881
+    restart: always
+    depends_on:
+      - redis
+
+  resent:
+      container_name: resent-mail
+      image: resent
+      build:
+        context: ./backend/Resend-mail-verification
+        dockerfile: Dockerfile
+      ports:
+        - 8882:8882
+      restart: always
+      depends_on:
+        - redis
+
+  forget_password:
+      container_name: forget-password
+      image: forget_password
+      build:
+        context: ./backend/Forget-Password
+        dockerfile: Dockerfile
+      ports:
+        - 8883:8883
+      restart: always
+      depends_on:
+        - redis    
+
+
+  verify:
+      container_name: verify-email-otp
+      image:  verify
+      build:
+        context: ./backend/Verify-Email-Otp
+        dockerfile: Dockerfile
+      ports:
+        - 8884:8884
+      restart: always
+      depends_on:
+        - redis  
