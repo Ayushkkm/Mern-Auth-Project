@@ -12,7 +12,7 @@ COPY . .
 EXPOSE 8880
 
 ENV PORT=8880
-ENV MONGODB_URI= mongodb+srv://develop7447:jolYePQVlnL0SAR0@cluster0.prxrzb3.mongodb.net/BhaiyaBackend?retryWrites=true&w=majority&appName=Cluster0
+ENV MONGODB_URI=mongodb+srv://develop7447:jolYePQVlnL0SAR0@cluster0.prxrzb3.mongodb.net/BhaiyaBackend?retryWrites=true&w=majority&appName=Cluster0
 ENV CORS_ORIGIN=*
 ENV ACCESS_TOKEN_SECRET=d28533cf-d4b2-4919-a59a-97322652023f
 ENV ACCESS_TOKEN_EXPIRY=1d
@@ -22,8 +22,8 @@ ENV REDIS_HOST=redis
 ENV REDIS_PORT=6379
 ENV REDIS_PREFIX=master-backend
 ENV REDIS_EXPIRE=60*60
-ENV CLOUDINARY_CLOUD_NAME=
-ENV CLOUDINARY_API_KEY=
-ENV CLOUDINARY_API_SECRET=
+ENV CLOUDINARY_CLOUD_NAME=dfmjzzx5o
+ENV CLOUDINARY_API_KEY=897734446828232
+ENV CLOUDINARY_API_SECRET=hIdbW9mH8vLqgW3VoLih1XHDOdg
 
 CMD ["npm", "run", "start"]

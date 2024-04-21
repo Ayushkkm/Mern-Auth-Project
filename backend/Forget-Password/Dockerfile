@@ -12,7 +12,7 @@ COPY . .
 EXPOSE 8883
 
 ENV PORT=8883
-ENV MONGODB_URI= mongodb+srv://develop7447:jolYePQVlnL0SAR0@cluster0.prxrzb3.mongodb.net/BhaiyaBackend?retryWrites=true&w=majority&appName=Cluster0
+ENV MONGODB_URI=mongodb+srv://develop7447:jolYePQVlnL0SAR0@cluster0.prxrzb3.mongodb.net/BhaiyaBackend?retryWrites=true&w=majority&appName=Cluster0
 ENV CORS_ORIGIN=*
 ENV ACCESS_TOKEN_SECRET=d28533cf-d4b2-4919-a59a-97322652023f
 ENV ACCESS_TOKEN_EXPIRY=1d
